@@ -22,7 +22,7 @@ class Interface:
             char = sys.stdin.read(1)
             print(char,flush=True,end="")
             mora += char
-            if mora[-1] in "aeiou":
+            if mora[-1] in "aeiou. ":
                 break
             if len(mora) == 2:
                 if mora[-1] in "mng":
