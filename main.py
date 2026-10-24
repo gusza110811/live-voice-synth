@@ -10,7 +10,7 @@ class Interface:
 
         # load
         for file in os.listdir("vb"):
-            self.voicebank[file.rsplit(".",1)[0]] = file
+            self.voicebank[file.rsplit(".",1)[0]] = "vb/"+file
 
         print(self.voicebank)
 
@@ -38,7 +38,7 @@ class Interface:
             sound = vb.get(mora)
 
             if sound:
-                playsound3.playsound("vb/"+sound,block=False)
+                playsound3.playsound(sound,block=False)
 
 if __name__ == "__main__":
     termmagic.disable_buffering()
