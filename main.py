@@ -24,6 +24,9 @@ class Interface:
             mora += char
             if mora[-1] in "aeiou":
                 break
+            if len(mora) == 2:
+                if mora[-1] in "mng":
+                    break
 
         return mora
 
