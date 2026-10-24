@@ -2,6 +2,7 @@ import os
 import sys
 import termmagic
 import playsound3
+import time
 
 class Interface:
     def __init__(self):
@@ -37,7 +38,9 @@ class Interface:
             sound = vb.get(mora)
 
             if sound:
-                playsound3.playsound("vb/"+sound)
+                playsound3.playsound("vb/"+sound,block=False)
+
+            time.sleep(0.19)
 
 if __name__ == "__main__":
     termmagic.disable_buffering()
