@@ -20,8 +20,13 @@ class Interface:
 
         while 1:
             char = sys.stdin.read(1)
+            if char == "\x7F" or char == "\b":
+                print("\b \b",flush=True,end="")
+                mora = mora[:-1]
+                continue
             print(char,flush=True,end="")
             mora += char
+
             if mora[-1] in "aeiou. ":
                 break
             if len(mora) == 2:
