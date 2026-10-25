@@ -27,7 +27,7 @@ class Interface:
             print(char,flush=True,end="")
             mora += char
 
-            if mora[-1] in "aeiou. ":
+            if mora[-1] in "aeiou. \n":
                 break
             if len(mora) == 2:
                 if mora[-1] in "mng":
